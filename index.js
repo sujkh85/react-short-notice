@@ -1,7 +1,6 @@
-import ShortNoticeContainer from './ShortNoticeContainer'
-import ShortNoticeContraller from './ShortNoticeContraller' 
+"use strict";
 
-export default {
-  ShortNoticeContainer, 
-  ShortNoticeContraller
-}
+var ShortNoticeContainer = require("./ShortNoticeContainer")
+var ShortNoticeContraller = require("./ShortNoticeContraller")
+
+module.exports = {ShortNoticeContainer, ShortNoticeContraller}
