@@ -1,0 +1,27 @@
+{
+  "name": "react-short-notice",
+  "version": "0.0.1",
+  "description": "react component alert or error short notice",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sujkh85/react-short-notice.git"
+  },
+  "keywords": [
+    "react",
+    "component",
+    "notice"
+  ],
+  "author": "sujkh85",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/sujkh85/react-short-notice/issues"
+  },
+  "homepage": "https://github.com/sujkh85/react-short-notice#readme",
+  "dependencies": {
+    "react": "^16.2.0"
+  }
+}
