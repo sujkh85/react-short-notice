@@ -47,6 +47,8 @@ ShortNoticeContraller.jsx call =>  Listener ShortNoticeContainer.js
       setTimeout(()=>{
         ShortNoticeContraller.hide('sparkle')
       },6000)
+      //all hide short notice
+      ShortNoticeContraller.allHide()
     }
 
     render(){

@@ -91,6 +91,7 @@
       _this.onListener = _this.onListener.bind(_this);
       _this.show = _this.show.bind(_this);
       _this.hide = _this.hide.bind(_this);
+      _this.allHide = _this.allHide.bind(_this);
       return _this;
     }
 
@@ -106,6 +107,9 @@
             break;
           case 'hide':
             this.hide(e.detail.payload);
+            break;
+          case 'allHide':
+            this.allHide();
             break;
           default:
             break;
@@ -139,6 +143,17 @@
         var id = this.state.id;
 
         if (id === payload.id) {
+          this.setState({
+            isShow: false
+          });
+        }
+      }
+    }, {
+      key: 'allHide',
+      value: function allHide() {
+        var isShow = this.state.isShow;
+
+        if (isShow === true) {
           this.setState({
             isShow: false
           });
@@ -206,6 +221,17 @@
             payload: {
               id: id
             }
+          }
+        });
+        window.dispatchEvent(event);
+      }
+    }, {
+      key: 'allHide',
+      value: function allHide() {
+        var event = new CustomEvent('short-notice', {
+          detail: {
+            type: 'allHide',
+            payload: {}
           }
         });
         window.dispatchEvent(event);

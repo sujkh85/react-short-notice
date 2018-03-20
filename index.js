@@ -13,6 +13,7 @@ export class ShortNoticeContainer extends Component {
     this.onListener = this.onListener.bind(this)
     this.show = this.show.bind(this)
     this.hide = this.hide.bind(this) 
+    this.allHide = this.allHide.bind(this)
   }
 
   onListener(e){
@@ -24,6 +25,9 @@ export class ShortNoticeContainer extends Component {
         break;
       case 'hide':
         this.hide(e.detail.payload);
+        break;
+      case 'allHide':
+        this.allHide()
         break;
       default:
         break;
@@ -51,6 +55,15 @@ export class ShortNoticeContainer extends Component {
   hide(payload){
     const {id} = this.state
     if(id === payload.id){
+      this.setState({
+        isShow:false
+      })
+    }
+  }
+
+  allHide(){
+    const {isShow} = this.state
+    if(isShow === true){
       this.setState({
         isShow:false
       })
@@ -106,6 +119,15 @@ export class ShortNoticeContraller {
         payload:{
           id:id
         }
+      }
+    });
+    window.dispatchEvent(event);
+  }
+  static allHide(){
+    let event = new CustomEvent('short-notice', {
+      detail: {
+        type:'allHide',
+        payload:{}
       }
     });
     window.dispatchEvent(event);
