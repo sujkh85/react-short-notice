@@ -1,8 +1,8 @@
 (function (global, factory) {
   if (typeof define === "function" && define.amd) {
-    define(["module", "./ShortNoticeContainer", "./ShortNoticeContraller"], factory);
+    define(["module", "src/ShortNoticeContainer", "src/ShortNoticeContraller"], factory);
   } else if (typeof exports !== "undefined") {
-    factory(module, require("./ShortNoticeContainer"), require("./ShortNoticeContraller"));
+    factory(module, require("src/ShortNoticeContainer"), require("src/ShortNoticeContraller"));
   } else {
     var mod = {
       exports: {}
