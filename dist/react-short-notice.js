@@ -16,7 +16,7 @@
   Object.defineProperty(exports, "__esModule", {
     value: true
   });
-  exports.ShortNoticeContraller = exports.ShortNoticeContainer = undefined;
+  exports.ShortNoticeController = exports.ShortNoticeContainer = undefined;
 
   var _react2 = _interopRequireDefault(_react);
 
@@ -194,12 +194,12 @@
     return ShortNoticeContainer;
   }(_react.Component);
 
-  var ShortNoticeContraller = exports.ShortNoticeContraller = function () {
-    function ShortNoticeContraller() {
-      _classCallCheck(this, ShortNoticeContraller);
+  var ShortNoticeController = exports.ShortNoticeController = function () {
+    function ShortNoticeController() {
+      _classCallCheck(this, ShortNoticeController);
     }
 
-    _createClass(ShortNoticeContraller, null, [{
+    _createClass(ShortNoticeController, null, [{
       key: 'show',
       value: function show(id) {
         var event = new CustomEvent('short-notice', {
@@ -238,8 +238,8 @@
       }
     }]);
 
-    return ShortNoticeContraller;
+    return ShortNoticeController;
   }();
 
-  exports.default = { ShortNoticeContainer: ShortNoticeContainer, ShortNoticeContraller: ShortNoticeContraller };
+  exports.default = { ShortNoticeContainer: ShortNoticeContainer, ShortNoticeController: ShortNoticeController };
 });

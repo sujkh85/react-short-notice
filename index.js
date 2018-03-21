@@ -99,7 +99,7 @@ export class ShortNoticeContainer extends Component {
 }
 
 
-export class ShortNoticeContraller {
+export class ShortNoticeController {
   static show(id){
     let event = new CustomEvent('short-notice', {
       detail: {
@@ -135,4 +135,4 @@ export class ShortNoticeContraller {
 }
 
 
-export default {ShortNoticeContainer, ShortNoticeContraller}
+export default {ShortNoticeContainer, ShortNoticeController}

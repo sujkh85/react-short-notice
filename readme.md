@@ -29,26 +29,25 @@ ShortNoticeContraller.jsx call =>  Listener ShortNoticeContainer.js
 ### example
 
 ```
-  import SNC from 'react-short-notice/ShortNoticeContainer'
-  import ShortNoticeContraller from 'react-short-notice/ShortNoticeContraller'
+  import {ShortNoticeController, ShortNoticeContainer} from react-short-notice
 
   class Container extends React.Component {
     componentDidMount(){
-      ShortNoticeContraller.show('inErrorMessage')
+      ShortNoticeController.show('inErrorMessage')
 
       setTimeout(()=>{
-        ShortNoticeContraller.show('shortNotice')
+        ShortNoticeController.show('shortNotice')
       },2000)
 
       setTimeout(()=>{
-        ShortNoticeContraller.hide('shortNotice')
+        ShortNoticeController.hide('shortNotice')
       },4000)
 
       setTimeout(()=>{
-        ShortNoticeContraller.hide('sparkle')
+        ShortNoticeController.hide('sparkle')
       },6000)
       //all hide short notice
-      ShortNoticeContraller.allHide()
+      ShortNoticeController.allHide()
     }
 
     render(){
