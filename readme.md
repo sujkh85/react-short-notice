@@ -29,7 +29,7 @@ ShortNoticeContraller.jsx call =>  Listener ShortNoticeContainer.js
 ### example
 
 ```
-  import {ShortNoticeController, ShortNoticeContainer} from react-short-notice
+  import {ShortNoticeController, ShortNoticeContainer} from 'react-short-notice'
 
   class Container extends React.Component {
     componentDidMount(){
@@ -53,15 +53,15 @@ ShortNoticeContraller.jsx call =>  Listener ShortNoticeContainer.js
     render(){
       return(
         <div> 
-          <SNC id='inErrorMessage' timeout='2000'>
+          <ShortNoticeContainer id='inErrorMessage' timeout='2000'>
             <span>error message</span>
-          </SNC>
-          <SNC id='shortNotice'>
+          </ShortNoticeContainer>
+          <ShortNoticeContainer id='shortNotice'>
             <span>shortNotice</span>
-          </SNC>
-          <SNC id='sparkle' transition='2s' timeout='2000'>
+          </ShortNoticeContainer>
+          <ShortNoticeContainer id='sparkle' transition='2s' timeout='2000'>
             <span>shortNotice</span>
-          </SNC>
+          </ShortNoticeContainer>
         </div>
       )
     }
