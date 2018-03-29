@@ -169,7 +169,7 @@
       value: function componentWillUnmount() {
         if (this.timer) {
           clearTimeout(this.timer);
-          timer = null;
+          this.timer = null;
         }
         window.removeEventListener('short-notice', this.onListener, false);
       }
