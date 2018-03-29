@@ -42,7 +42,7 @@ export class ShortNoticeContainer extends Component {
         isShow:true
       },()=>{
         if(timeout){
-          setTimeout(() => {
+          this.timer = setTimeout(() => {
             this.setState({
               isShow:false
             })

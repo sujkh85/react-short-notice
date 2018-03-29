@@ -128,7 +128,7 @@
             isShow: true
           }, function () {
             if (timeout) {
-              setTimeout(function () {
+              _this2.timer = setTimeout(function () {
                 _this2.setState({
                   isShow: false
                 });
