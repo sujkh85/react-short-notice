@@ -1,6 +1,6 @@
 {
   "name": "react-short-notice",
-  "version": "0.1.4",
+  "version": "0.1.5",
   "description": "react component alert or error short notice",
   "main": "./dist/react-short-notice.js",
   "scripts": {

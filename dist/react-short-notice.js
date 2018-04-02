@@ -92,6 +92,7 @@
       _this.show = _this.show.bind(_this);
       _this.hide = _this.hide.bind(_this);
       _this.allHide = _this.allHide.bind(_this);
+      _this.clearTimer = _this.clearTimer.bind(_this);
       return _this;
     }
 
@@ -116,6 +117,14 @@
         }
       }
     }, {
+      key: 'clearTimer',
+      value: function clearTimer() {
+        if (this.timer) {
+          clearTimeout(this.timer);
+          this.timer = null;
+        }
+      }
+    }, {
       key: 'show',
       value: function show(payload) {
         var _this2 = this;
@@ -128,6 +137,7 @@
             isShow: true
           }, function () {
             if (timeout) {
+              _this2.clearTimer();
               _this2.timer = setTimeout(function () {
                 _this2.setState({
                   isShow: false
@@ -143,6 +153,7 @@
         var id = this.state.id;
 
         if (id === payload.id) {
+          this.clearTimer();
           this.setState({
             isShow: false
           });
@@ -154,6 +165,7 @@
         var isShow = this.state.isShow;
 
         if (isShow === true) {
+          this.clearTimer();
           this.setState({
             isShow: false
           });

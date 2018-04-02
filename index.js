@@ -14,6 +14,7 @@ export class ShortNoticeContainer extends Component {
     this.show = this.show.bind(this)
     this.hide = this.hide.bind(this) 
     this.allHide = this.allHide.bind(this)
+    this.clearTimer = this.clearTimer.bind(this)
   }
 
   onListener(e){
@@ -34,6 +35,13 @@ export class ShortNoticeContainer extends Component {
     }
   }
 
+  clearTimer(){
+    if(this.timer){
+      clearTimeout(this.timer)
+      this.timer = null
+    }
+  }
+
   show(payload){
     const {id} = this.state
     const {timeout} = this.props
@@ -42,6 +50,7 @@ export class ShortNoticeContainer extends Component {
         isShow:true
       },()=>{
         if(timeout){
+          this.clearTimer()
           this.timer = setTimeout(() => {
             this.setState({
               isShow:false
@@ -55,6 +64,7 @@ export class ShortNoticeContainer extends Component {
   hide(payload){
     const {id} = this.state
     if(id === payload.id){
+      this.clearTimer()
       this.setState({
         isShow:false
       })
@@ -64,6 +74,7 @@ export class ShortNoticeContainer extends Component {
   allHide(){
     const {isShow} = this.state
     if(isShow === true){
+      this.clearTimer()
       this.setState({
         isShow:false
       })
